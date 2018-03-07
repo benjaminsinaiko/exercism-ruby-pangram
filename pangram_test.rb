@@ -18,28 +18,28 @@ class PangramTest < Minitest::Test
   end
 
   def test_pangram_with_only_lower_case
-    skip
+    # skip
     phrase = 'the quick brown fox jumps over the lazy dog'
     result = Pangram.pangram?(phrase)
     assert result, "Expected true, got: #{result.inspect}. #{phrase.inspect} IS a pangram"
   end
 
   def test_missing_character_x
-    skip
+    # skip
     phrase = 'a quick movement of the enemy will jeopardize five gunboats'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
   end
 
   def test_another_missing_character_eg_h
-    skip
+    # skip
     phrase = 'five boxing wizards jump quickly at it'
     result = Pangram.pangram?(phrase)
     refute result, "Expected false, got: #{result.inspect}. #{phrase.inspect} is NOT a pangram"
   end
 
   def test_pangram_with_underscores
-    skip
+    # skip
     phrase = 'the_quick_brown_fox_jumps_over_the_lazy_dog'
     result = Pangram.pangram?(phrase)
     assert result, "Expected true, got: #{result.inspect}. #{phrase.inspect} IS a pangram"
@@ -91,7 +91,7 @@ class PangramTest < Minitest::Test
   # http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/constants.html
 
   def test_bookkeeping
-    skip
+    # skip
     assert_equal 6, BookKeeping::VERSION
   end
 end
