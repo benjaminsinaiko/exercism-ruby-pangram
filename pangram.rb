@@ -1,8 +1,12 @@
 class Pangram
   def self.pangram?(string)
-    phrase = string.downcase.downcase.chars.to_a.sort.uniq - [" ", "_"]
+    phrase = string.gsub(/[^a-zA-Z]/, '')
+      .downcase
+      .chars
+      .sort
+      .uniq
     alpha = ('a'..'z').to_a
-    phrase == alpha ? true : false
+    phrase.eql? alpha
   end
 end
 
